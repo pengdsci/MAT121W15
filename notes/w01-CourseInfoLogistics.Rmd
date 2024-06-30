@@ -113,7 +113,7 @@ Although we don't meet in class every week, we still accomplish weekly learning 
 5. The last task of each is to to D2L to complete the weekly quiz. You should think of the weekly as the regular weekly homework assignment. _Weely Quizzes_ are <font color = "blue"> will be administrated through D2L and will be available every Friday</font> and <font color = "red">due the following Sunday</font> (See the detailed information on the course web page). You have two and a half days to complete the weekly assignment. D2L will automatically grade your weeklt assignments. 
 
 6. **Additional information about the weekly quizzes**
-   * Every weekly quiz has about 25 multiple-choice questions. There will be no show-your-work problems in weekly quizzes.
+   * Every weekly quiz has about 35 multiple-choice questions. There will be no show-your-work problems in weekly quizzes.
 
    * Everyone will have their own version of the quiz with the same number of questions at the same level of difficulty.
   
