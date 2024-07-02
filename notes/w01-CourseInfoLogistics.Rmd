@@ -3,6 +3,13 @@ title: "Important Course Information"
 author: "Cheng Peng"
 date: " "
 output:
+  pdf_document: 
+    toc: yes
+    toc_depth: 4
+    fig_caption: yes
+    number_sections: yes
+    fig_width: 5
+    fig_height: 4
   html_document: 
     toc: yes
     toc_float: true
@@ -11,13 +18,6 @@ output:
     fig_caption: yes
     number_sections: yes
     theme: readable
-  pdf_document: 
-    toc: yes
-    toc_depth: 4
-    fig_caption: yes
-    number_sections: yes
-    fig_width: 5
-    fig_height: 4
 ---
 <style type="text/css">
 
@@ -113,6 +113,18 @@ Although we don't meet in class every week, we still accomplish weekly learning 
 4. If you have any difficulty understanding some concepts or some examples, please take note and then **reach out to me directly **. Please trust yourself that **you can do it no matter what prior mathematics experience you may have**. It is perfectly normal to feel challenged in the learning process. All you need to do is to seek help from me, or your peers. Never give up!
 
 5. The last task of each is to to D2L to complete the weekly quiz. You should think of the weekly as the regular weekly homework assignment. _Weely Quizzes_ are <font color = "blue"> will be administrated through D2L and will be available every Friday</font> and <font color = "red">due the following Sunday</font> (See the detailed information on the course web page). You have 120 minutes to complete each weekly quiz (exam). D2L will automatically grade your weekly assignments. 
+\
+
+The above suggested weekly learning schedule is outlined graphically below.
+
+\
+
+```{r fig.align='center', fig.width= 8, fig.height=6}
+ knitr::include_graphics("OnlineLearningStrategies.png")
+```
+
+
+
 
 6. **Additional information about the weekly quizzes**
    * Every weekly quiz has about 35 multiple-choice questions. There will be no show-your-work problems in weekly quizzes.
