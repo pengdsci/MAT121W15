@@ -1,1166 +1,389 @@
 
-<!DOCTYPE html>
-<html>                                    <!-- open html tag: required  -->
+<html lang="en-US"  id = "top">
+<!--<![endif]-->
+<head>
+    <title>MAT121</title>
+<link rel="stylesheet" type="text/css" href="css/css">  
+<link rel='stylesheet' id='dt_style-css'  href='css/style.css' type='text/css' />
+<link rel='stylesheet' id='dt_menu-css'  href='css/menu-buttons.css' type='text/css' /> 
+<link rel='stylesheet' href='css/styleInFile.css' type='text/css' /> 
 
-  <head>
-<style type="text/css">
-.inline {
-  background-color: #f7f7f7;
-  border:solid 1px #B0B0B0;
-}
-.error {
-	font-weight: bold;
-	color: #FF0000;
-}
-.warning {
-	font-weight: bold;
-}
-.message {
-	font-style: italic;
-}
-.source, .output, .warning, .error, .message {
-	padding: 0 1em;
-  border:solid 1px #F7F7F7;
-}
-.source {
-  background-color: #f5f5f5;
-}
-.left {
-  text-align: left;
-}
-.right {
-  text-align: right;
-}
-.center {
-  text-align: center;
-}
-.hl.num {
-  color: #AF0F91;
-}
-.hl.str {
-  color: #317ECC;
-}
-.hl.com {
-  color: #AD95AF;
-  font-style: italic;
-}
-.hl.opt {
-  color: #000000;
-}
-.hl.std {
-  color: #585858;
-}
-.hl.kwa {
-  color: #295F94;
-  font-weight: bold;
-}
-.hl.kwb {
-  color: #B05A65;
-}
-.hl.kwc {
-  color: #55aa55;
-}
-.hl.kwd {
-  color: #BC5A65;
-  font-weight: bold;
-}
-</style>  
-      
-      <!-- open page header: required -->
-    <title>SDS-BS</title>      <!-- page title appears on the tab -->
-    
-  <style>   <!-- css style file -->
-        
-      body{
-            font-family: Verdana, sans-serif;
-            font-size: 11px;
-          }
-        
-      div{
-         font-family: Verdana, sans-serif;
-         color: black;
-         font-size: 11px;
-         padding-top:0px;
-         margin-bottom: 1px;
-      }
-      
-      p{
-         font-family: Verdana, sans-serif;
-         color: black;
-         font-size: 11px;
-         padding-top:1px;
-         line-height: 16px;   /* within paragraph */
-         margin-bottom: 15px; /* between paragraphs */
-      }
-      
-    	 h1, h2, h3, h4, h5, btn {
-		         font-family: Verdana, sans-serif; 
-             /*font-weight: bold;*/
-             font-variant: small-caps;	
-           }
-
-   link-btn {
-        background-color: purple;
-        color: gold;
-        border: 1px solid DodgerBlue;
-        padding: 5px 5px 5px 5px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        height: 14px;
-        font-size: 12px;
-        font-weight: normal;
-        margin: 2px 2px 2px 2px;
-        cursor: pointer;
-        }
-      
-.collapsible {
-  background-color: white;
-  color: purple;
-  cursor: pointer;
-  padding: -2px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
-
-.active, .collapsible:hover {
-  background-color: white;
-}
-
-.content {
-  padding: 0 18px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  background-color: #f1f1f1;
-}
-      
-.tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
-}
-
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 350px;
-  background-color: #451952;
-  color: gold;
-  text-align: left;
-  border-radius: 6px;
-  padding: 19px 19px;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -1px;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
-}  
-</style>
- 
 <style>
-#myDIV {
-  width: 100%;
-  padding: 50px 0;
-  color: purple;
-  text-align: center;
-  background-color: darkpurple;
-  margin-top: 20px;
+header aside0 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: purple;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}    
+
+swin {
+   list-style-type: none;  
+  background-color: coral;
+  width: 75%;
+  height: 100%;
+  border: 1px solid black;
+  overflow: scroll;
 }
-</style>     
-      
-  </head>     <!-- close page header: required -->
-  
-  <!-- All contents of the web page MUST be placed between <body> </body> -->
-  
-  <body style="background-image: url('img/bgIMG.jpg')">   <!-- open html body: required -->
-  <BR><BR>
-  
-   <table align = "center"  border = "0"  width=90%  bordercolor="gold"  bgcolor = "white">        
-     <tbody>
-     
-      <tr>
-      <!--create a margin to the left side of the table-->
-      <!--TD  style="background-image: url('img/TableBg.jpg'); width:2%;"></TD--> 
-      <!--TD bgcolor='#003366'--> 
-      <TD style="background-image: url('img/bgIMG0.jpg')" style="width:30%">
-        <table border = "0" bordercolor="darkgreen" align = "center"
-        width="100%" height = "100%" style = "border-spacing: 0"> 
-           <tr>
-            <TD style = "line-height: 20%;">
-                <BR><BR><BR><BR><BR><BR><BR><BR>
-                <!--img src="img/CP0.jpg" width=120 height=130-->
-                <center><h1  style="padding-bottom: 0px;"><font color = "gold">  SDS</font></h1>
-                <BR><br><br><BR><br><br>
-                <p><center> <font color = "lightgray">A Proposal for upgrading current</font>
-                    <br><br><BR><br><br><BR><br><br><font color = "skyblue" size = 3>Statistics Concentration </font> <br><br><BR><br><br><BR><br><br><font color = "lightgray">to a bachelor of science in </font><br><br><BR><br><br><BR><br><br> <font color = "gold" size = 3> Statistics and Data Science </font> <br><br><br></center></p>
-                <BR><BR><BR><BR><BR>
-                <hr color = "gray">
-            </TD>
-            <TD></TD>
-           </tr>
-         
-           <tr>
-            <TD style = "line-height: 30%;">
-                <h5><font color = "white">&nbsp; Program Hightlights</font></h5>
-                <p><font color = "lightgray">
-                    &nbsp; 1. Interdisciplinary and Applications emphasized <br>
-                    &nbsp; 2. Solid foundation of statistics and data science <br>
-                    &nbsp; 3. Intensive programming with multiple languages <br>
-                    &nbsp; 4. Modern interactive technologies for technical communications <br>
-                    &nbsp; 5. Integrating diverse methodologies via course projects <br>
-                    &nbsp; 6. Opportunities for SDS methodology research<br>
+</style>
 
-                    </p>
-                    <hr color="gray">
-            </TD>
-          </tr>
-         
-            <tr>
-            <TD style = "line-height: 30%;">
-                <h5><font color = "white">&nbsp; Credit Distribution: 120</font></h5>
-                <p><font color = "lightgray">
-                    &nbsp;  General Education Requirements: 43<br>
-                    &nbsp;  University Requirements (S, E, W, I): 9 <br>
-                    &nbsp;  SDS Requirements: 44 <br>
-                    &nbsp;  SDS Electives: 15<br>
-                    &nbsp;  Domain Elective: 9<br><br>
-                    &nbsp;  <font color="gold">After excluding double/triple counting S, W, E courses, total credit hours: 120</font>   
-                    </p>
-                    <hr color="gray">
-            </TD>
-          </tr>
-                              
-            <!--tr>
-            <TD style = "line-height: 30%;">
-                <h5><font color = "white">&nbsp; SDS Minors</font></h5>
-                <p><font color = "lightgray">
-                    
-                    <br>
-                    <!--/font></p0>
-                    <!--hr color="gray">
-                    <p0><font color = "lightgray">
-                    &nbsp;  <font color="gold">To be completed...</font>  </p>
-                    <hr color="gray">
-            </TD>
-          </tr-->
-                    
-         <tr>
-            <TD>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            </TD>
-         </tr>
-         
-         </table>
-        </TD>
-      
-         <!--create a margin to the contact and the major content columns of the major table-->
-         <TD style="width:2%"></TD>
-      
-        <TD style="width:64%" background="img/Draft4Discussion.jpg">
-        <table>
-          <tr>
-           <TD  style = "line-height: 110%;">
-              <h4 style="padding-bottom: 0px; margin: 0;"><font color = "#123456">Objective and Rationale</font></h4>
-               <!--font color = 'black' face="WildWest" size="4"-->
-                  <p><b>Objective</b><br>
-                   To create a BS degree in Statistics and Data Science (SDS) to increase the program enrollment and improve retention.</p>
-                 
-                  <p><b>Rationale</b><br>
-                  
-                  1. <i>The declining enrollment of current statistics concentration.</i><br>
-                    
-                    <table style ="font-family: Verdana, sans-serif; color: black; font-size: 11px;         padding-top:0px; border-color: #96D4D4;" border=1>
-                       <tr>
-                           <th></th>
-                           <th>F2021</th>
-                           <th>S2022</th>
-                           <th>F2022</th>
-                           <th>S2023</th>
-                           <th>F2023</th>
-                           <th>S2024</th>
-                       </tr>
-                       <tr>
-                           <td><b>Stat Concentration</b></td>
-                           <td>41  </td>
-                           <td>45  </td>
-                           <td>46  </td>
-                           <td>44  </td>
-                           <td>37  </td>
-                           <td>26 </td>
-                      </tr>
-                      <tr>
-                          <td><b>Stat Minor</b></td>
-                          <td>73 </td>
-                          <td>54 </td>
-                          <td>57 </td>
-                          <td>38 </td>
-                          <td>41 </td>
-                          <td>45 </td>
-                      </tr>
-               </table> 
-                         
-                      
-                  <p>    
-                  
-                      
-                  2. <i>The continuous change of the skillset in the field due to new technologies and methodologies.</i><br> 
-                      
-                  3. <i>The need for discipline-specific and job-market relevant curriculum.</i><br>   
-                  
-                          
-                  </p>
-                  <br>
-               <hr color="lightblue">
-            </TD>
-             
-         </tr>
-
-        <tr>
-           <TD style = "line-height: 110%;" >
-              <h4 style="padding-bottom: 0px; margin: 0;"><font color = "#123456">Proposed Curriculum</font></h4>
-               <font color = 'black' face="WildWest" size="4">
-               
-               <p><b>General Education Requirements</b> (40 Credits)<br>
-                   
-                   <table style ="font-family: Verdana, sans-serif; color: black; font-size: 11px;         padding-top:0px; border-color: #96D4D4;" border=1>
-                       <tr>
-                           <th>Courses</th>
-                           <th>Credits</th>
-                       </tr>
-                       <tr>
-                           <td>First Year Experience (FYE)  </td>
-                           <td>4  </td>
-                      </tr>
-                      <tr>
-                          <td>WRT 120/WRT 123 </td>
-                          <td>3 </td>
-                      </tr>
-                       <tr>
-                          <td>WRT 200-Level Course </td>
-                          <td>3 </td>
-                      </tr>
-                       <tr>
-                          <td>Mathematics (MAT 311 below) </td>
-                          <td>3 </td>
-                      </tr>
-                       <tr>
-                          <td>Diverse Communities "J" Course </td>
-                          <td>3 </td>
-                      </tr>
-                       <tr>
-                          <td>Interdisciplinary "I" Course </td>
-                          <td>3 </td>
-                      </tr>
-                       <tr>
-                          <td>Science (CSC 141 below) </td>
-                          <td>3 </td>
-                      </tr>
-                       <tr>
-                          <td>Science </td>
-                          <td>3 </td>
-                      </tr>
-                       <tr>
-                          <td>Behavior &amp; Social Science </td>
-                          <td>3 </td>
-                      </tr>
-                       <tr>
-                          <td>Behavior &amp; Social Science </td>
-                          <td>3 </td>
-                      </tr>
-                       <tr>
-                          <td>Humanities </td>
-                          <td>3 </td>
-                      </tr>
-                       <tr>
-                          <td>Humanities </td>
-                          <td>3 </td>
-                      </tr>
-                       <tr>
-                          <td>Arts </td>
-                          <td>3 </td>
-                      </tr>
-                      <td><b>Total</b> </td>
-                          <td>40 </td>
-                      </tr>
-               </table> 
-               </p>
-                   
-               <p><b>University Requirements</b> (21  Credits)<br>
-                   
-                   <table style ="font-family: Verdana, sans-serif; color: black; font-size: 11px;         padding-top:0px; border-color: #96D4D4;" border=1>
-                       <tr>
-                           <th>Courses</th>
-                           <th>Credits</th>
-                           <th>Comments</th>
-                       </tr>
-                       <tr>
-                           <td>Three Writing Emphasis Courses  </td>
-                           <td>9  </td>
-                           <td>STA 490 and two <font color="blue">cognate courses<sup>&#42;</sup></font></td>
-                      </tr>
-                      <tr>
-                          <td>Three Speaking Emphasis Courses </td>
-                          <td>9 </td>
-                          <td> STA 490 is an "S" course</td>
-                      </tr>
-                       <tr>
-                          <td>Capstone Course </td>
-                          <td>3 </td>
-                          <td>STA 490</td>
-                      </tr>
-                       <tr>
-                          <td>Ethics Requirement </td>
-                          <td>3 </td>
-                          <td>STA 320 is an "E" course</td>
-                      </tr>
-                      <!--tr>
-                          <td><b>Total</b><br><font color = "red">(excluding STA courses)</font> </td>
-                          <td>9 </td>
-                          <td><font color = "red">exclude STA 490 and STA 320 credits which will be counted in statistics requirements. </font></td>
-                      </tr--> 
-                       
-               </table></p>
-               
-             <!--p><b>Cognate Writing Emphasis Courses</b> (6  Credits)<br>
-                   
-                   <table style ="font-family: Verdana, sans-serif; color: black; font-size: 11px;         padding-top:0px; border-color: #96D4D4;" border=1>
-                       <tr>
-                           <th>Courses</th>
-                           <th>Credits</th>
-                           <th>Comments</th>
-                       </tr>
-                       <tr>
-                          <td>Two "W" courses </td>
-                          <td>6 </td>
-                          <td>Choose two from the following list.</td>
-                       </tr>
-                      </table></p--> 
-                       
-                     <p><font color="blue" size = 1><b><sup>&#42;</sup>Suggested Cognate Writing Courses</b></font>
-                    <ul>
-                       <li style = "font-family: Verdana, sans-serif; color: blue; font-size: 10px;" >ENG 368. Business and Organizational Writing </li> 
-                        
-                       <li style = "font-family: Verdana, sans-serif; color: blue; font-size: 10px;" >ENG 371. Technical Writing </li>
-                        
-                       <li style = "font-family: Verdana, sans-serif; color: blue; font-size: 10px;" >ENG 375. Strategies for Writing in the Workplace </li>
-                        
-                       <li style = "font-family: Verdana, sans-serif; color: blue; font-size: 10px;" >BIO 310. 	Biostatistical Applications </li> 
-                    </ul>
-                    </p>
-                    
-                     <p><b>Free MAT/STA Electives</b> (12 Credits)<br>
-                                           
-                   <table style ="font-family: Verdana, sans-serif; color: black; font-size: 11px; padding-top:0px; border-color: #96D4D4;" border=1>
-                       <tr>
-                           <th>Courses</th>
-                           <th>Credits</th>
-                           <th>Comments</th>
-                       </tr>
-                       <tr>
-                           <td>MAT/STA Elective </td>
-                           <td>3  </td>
-                           <td>  </td>
-                      </tr>
-                      <tr>
-                           <td>MAT/STA Elective  </td>
-                           <td>3  </td>
-                           <td>  </td>
-                      </tr>
-                       <tr>
-                           <td>MAT/STA Elective  </td>
-                           <td>3  </td>
-                           <td>  </td>
-                      </tr>
-                       <tr>
-                           <td>MAT/STA Elective  </td>
-                           <td>3  </td>
-                           <td>  </td>
-                      </tr>
-                       
-                       <tr>
-                           <td>MAT/STA Elective  </td>
-                           <td>3  </td>
-                           <td>  </td>
-                      </tr>
-
-                       <tr>
-                           <td><b>Total</b> </td>
-                           <td>12 </td>
-                           <td>  </td>
-                      </tr>
-                 </table></p>
-               
-                  <p><font color="blue" size = 1><b>Suggested MAT/STA Elective Courses</b></font>
-                    <ul>
-                    <li style = "font-family: Verdana, sans-serif; color: blue; font-size: 10px;" >MAT 162. Calculus II </li> 
-                        
-                    <li style = "font-family: Verdana, sans-serif; color: blue; font-size: 10px;" >MAT 200. The Nature of Mathematics </li> 
-                                                
-                    <li style = "font-family: Verdana, sans-serif; color: blue; font-size: 10px;" >MAT 261. Calculus III </li> 
-                    
-                    <li style = "font-family: Verdana, sans-serif; color: blue; font-size: 10px;" >MAT 311. Linear Algebra </li> 
-                    
-                    <li style = "font-family: Verdana, sans-serif; color: blue; font-size: 10px;" >MAT 423. Applied Probability </li> 
-                        
-                    <li style = "font-family: Verdana, sans-serif; color: blue; font-size: 10px;" >STA 201. Statistical Methods for Political Polling </li> 
-                    
-                    <li style = "font-family: Verdana, sans-serif; color: blue; font-size: 10px;" >STA 202. Sports Analytics </li> 
-                         
-                    <li style = "font-family: Verdana, sans-serif; color: blue; font-size: 10px;" >STA 203. Probability and Statistics in Gaming </li> 
-                         
-                     <li style = "font-family: Verdana, sans-serif; color: blue; font-size: 10px;" >STA 318. Statistical Process Control </li> 
-                         
-                      <li style = "font-family: Verdana, sans-serif; color: blue; font-size: 10px;" >STA 408. Applications of Modern Nonparametric Statistics </li> 
-                         
-                        
-                    </ul>
-                    </p>  
-                    
-                <p><b>Free Domain Electives</b> (6 Credits)<br>
-                   Need to provide a list of suggested courses from domain application areas.
-                         
-                   <table style ="font-family: Verdana, sans-serif; color: black; font-size: 11px;         padding-top:0px; border-color: #96D4D4;" border=1>
-                       <tr>
-                           <th>Courses</th>
-                           <th>Credits</th>
-                           <th>Comments</th>
-                       </tr>
-                       <tr>
-                           <td>Domain Elective </td>
-                           <td>3  </td>
-                           <td>  </td>
-                      </tr>
-                      <tr>
-                           <td>Domain Elective </td>
-                           <td>3  </td>
-                           <td>  </td>
-                      </tr>
-                    
-            </table></p>
-             
-                    <p><font color="blue" size = 1><b>Suggested Domain Elective Courses</b></font>
-                    <ul>
-                    <li style = "font-family: Verdana, sans-serif; color: blue; font-size: 10px;" >MIS 300. Introduction to Management Information Systems </li> 
-                    
-                     <li style = "font-family: Verdana, sans-serif; color: blue; font-size: 10px;" >MIS 302. Data Analytics </li> 
-                        
-                    <li style = "font-family: Verdana, sans-serif; color: blue; font-size: 10px;" >ECO 401. Introduction to Econometrics </li> 
-                                                
-                    <li style = "font-family: Verdana, sans-serif; color: blue; font-size: 10px;" >HEA 419. Research Methods in Health </li> 
-                    
-                    <li style = "font-family: Verdana, sans-serif; color: blue; font-size: 10px;" >CSC 321. Database Management Systems </li> 
-                                         
-                        
-                    </ul>
-                    </p>  
-                    
-             <p><b>BS Statistics Major Requirements</b> (47 Credits)<br>
-                   
-                   <table style ="font-family: Verdana, sans-serif; color: black; font-size: 11px;         padding-top:0px; border-color: #96D4D4;" border=1>
-                       <tr>
-                           <th>Courses</th>
-                           <th>Credits</th>
-                           <th>Comments</th>
-                       </tr>
-                       <tr>
-                           <td><i class="tooltip"><font color = "red"> MAT125 Statistics I<sup><font color = "blue">Description</font></sup></font>
-                               <p0 class="tooltiptext">Introduction to probability, statistics, and statistical inference. Concepts include: descriptive statistics, probability, probability distributions, sampling distributions, confidence intervals, hypothesis testing, along with a formal introduction to linear regression and categorical data analysis. Statistical software, including but not limited to SPSS and Excel, will be used to facilitate the understanding of important statistical ideas and for the implementation of data analysis in many areas of application.<br>
-                                Pre / Co requisites: MAT 125 requires an appropriate score on the Mathematics Placement Exam.<br>
-                                Typically offered in Fall &amp; Spring.</p0>
-                             </i> </td>
-                           <td><font color = "red">3 </font> </td>
-                           <td><font color = "red">Math foundation</font>  </td>
-                      </tr>
-                      <tr>
-                           <td><font color = "red">MAT161 Calculus I</font> </td>
-                           <td><font color = "red">4 </font> </td>
-                           <td><font color = "red">Math foundation</font>  </td>
-                      </tr>
-                        <tr>
-                           <td><font color = "red">MAT243 Calculus and Linear ALgebra for Applied Statistics </font></td>
-                           <td><font color = "red">4</font>  </td>
-                           <td><font color = "red">Math foundation</font>  </td>
-                      </tr>
-                       
-                       <tr>
-                           <td><font color = "red">MAT325 Numerical Analysis </font></td>
-                           <td><font color = "red">3</font>  </td>
-                           <td><font color = "red">Math foundation  </td>
-                      </tr>
-                       
-                       <tr>
-                           <td>STA200 Statistics II </td>
-                           <td>3  </td>
-                           <td>Statistics foundation  </td>
-                      </tr>
-                        <tr>
-                            <td><i class="tooltip"><font color = "blue"> STA268 Interactive Exploratory Data Analysis<sup><sup><font color = "#451952"><b>New Course Description</b></font></sup></sup></font>
-                               <p0 class="tooltiptext">Introduce technologies that require interactive exploratory data analysis to uncover hidden patterns in massive and complex data and enhance effective analytic communications. Topics include web-based technologies and platforms, lower and high-dimension descriptive statistics, data reduction, feature engineering, model-based information extraction, and the design of interactive visual representation. A point-and-click software program such as Tableau and Qlick will be the primary tool for the course. Either RMarkdown or Jupyter Notebook will be used to generate interactive reports and web-based interactive presentations.<br>
-                                Pre / Co requisites: STA 200, CSC141(Python) or Permission of the Instructor. <br>
-                                Typically offered in Fall &amp; Spring.</p0>
-                               </i></td>
-                           <td><font color = "blue">3  </font></td>
-                           <td><font color = "black">Statistics foundation </font> </td>
-                      </tr>
-                       <tr>
-                            <td><font color = "blue"><i class="tooltip"><font color = "blue"> STA288 Programmatic Visual Analytics<sup><sup><font color = "#451952"><b>New Course Description</b></font></sup></sup></font>
-                               <p0 class="tooltiptext">This is a programming-based visual analytics course focusing on using principles of visual design and interactive technologies to unveil trends and patterns from data through statistical modeling and data-driven algorithms. Topics include traditional design principles, strategies, and elements in data visualization, programmatic approaches to automation and real-time visualization, conditioning and marginalizing approaches to visualizing models and algorithms for high dimensional data, etc. Students will gain hands-on experience through a series topic topic-specific mini-projects.
-                                <br>
-                                Pre / Co requisites: STA 200, STA 268, CSC141(Python) or Permission of the Instructor. <br>
-                                Typically offered in Fall &amp; Spring.</p0>
-                               </i> </td>
-                           <td><font color = "blue">3  </font></td>
-                           <td><font color = "blue">SDS foundation </font> </td>
-                      </tr>
-                      <tr>
-                           <td>STA311 Statistical Computing </td>
-                           <td>3  </td>
-                           <td>Statistics foundation  </td>
-                      </tr> 
-                       <tr>
-                           <td>STA319 Applied Statistics </td>
-                           <td>3  </td>
-                           <td>Statistics foundation  </td>
-                      </tr> 
-                         
-                       <tr>
-                           <td>STA320 Experimental Design </td>
-                           <td>3  </td>
-                           <td>Statistics foundation, "E" Course  </td>
-                      </tr> 
-                       <tr>
-                           <td>STA321 Topics in Advanced Statistics <br>
-                           <font color = "brown">Suggested renaming: STA421 Practical Regression Modeling</font></td>
-                           <td>3  </td>
-                           <td>Statistics foundation  </td>
-                      </tr> 
-                       
-                       <tr>
-                            <td><i class="tooltip"><font color = "blue"> STA328 A First Course in Data Science<sup><sup><font color = "#451952"><b>Course Description</b></font></sup></sup></font>
-                               <p0 class="tooltiptext">This is a non-technical and introductory course of data science using a programming language such as Python and R as the primary computational tool. The course will highlight data science as a process of integrating statistical models and machine learning algorithms to solve real-world problems. Students will gain hands-on data science experience through various case studies and projects from different real-world problems. Topics include platforms and technological tools, data acquisition and integration, training and retraining basic statistical and machine learning algorithms, methods and applications of cross-validation, effective storytelling,  concepts of automation and deployment, and monitoring and updating. 
-                               <br>    
-                               <b>Pre / Co requisites</b>: STA 319, STA 321, CSC141(Python) or Permission of the Instructor. 
-                                <br>
-                                Typically offered in Fall &amp; Spring.</p0>
-                               </i></td>
-                            <td><font color = "blue">3</font>  </td>
-                            <td><font color = "blue">SDS foundation</font>  </td>
-                      </tr>
-                       
-                        <!--tr>
-                           <td><i class="tooltip"><font color = "blue"> STA428 Statistical Methods for Data Science<sup><sup><font color = "#451952"><b>New Course Description</b></font></sup></sup></font>
-                               <p0 class="tooltiptext">This course introduces statistical methods used in data science and data science algorithms rooted in statistics to reflect the symbiotic relationship between the two subjects. Students will gain hands-on experience in integrating tools in both subjects to solve real-world problems. Topics include probabilistic and statistical models such as naive Bayes, algorithmic-based regression models, and machine learning tools such as tree-based algorithms, latent regression for dimension reduction, support vector machines, and neural networks. The course emphasizes application with commonly used software libraries.
-                               <br>    
-                               <b>Pre / Co requisites</b>: STA 319, STA 321 (STA421), CSC 141(Python) or Permission of the Instructor. <br>
-                                Typically offered in Fall &amp; Spring.</p0>
-                               </i>  </td>
-                           <td><font color = "blue">3</font>  </td>
-                           <td><font color = "blue">SDS foundation</font>  </td>
-                      </tr-->
-                       
-                       <tr>
-                           <td><font color = "darkgreen">STA419 Basics of Statistical Learning</font> </td>
-                           <td><font color = "darkgreen">3</font></td>
-                           <td><font color = "darkgreen">SDS foundation</font></td>
-                      </tr> 
-                       <tr>
-                           <td><font color = "red">MAT421 Mathematical Statistics I </font></td>
-                           <td><font color = "red">3 </font> </td>
-                           <td><font color = "red">Mathematics foundation </font> </td>
-                      </tr> 
-                       <tr>
-                           <td><font color = "red">MAT422 Mathematical Statistics II </font></td>
-                           <td><font color = "red">3  </font></td>
-                           <td><font color = "red">Mathematics foundation </font> </td>
-                      </tr> 
-
-                      <tr>
-                           <td><b>Total</b><br><font color = "red">If STA320 and STA490 are considered as part of<br> the university requirement, the total STA credit: 47</font> </td>
-                           <td>50  </td>
-                           <td><font color = "red">Math credits: 20 </font><br>
-                               <font color = "black">Stat credits: 18 </font><br>
-                               <font color = "blue"><b>SDS credits: 9 </b></font>
-                           </td>
-                      </tr> 
-                   </table></p>
-                  
-
-
-
-               <br><br>
-               </font>
-               <hr color="lightblue">
-            </TD>
-        </tr>
-
-        <tr>
-           <TD style = "line-height: 110%;">
-              <h4 style="padding-bottom: 0px; margin: 0;"><font color = "#123456">Four-Year Course Plan</font></h4>
-               <font color = 'black' face="WildWest" size="4">
-                   
-          <p>         
-             <table style ="font-family: Verdana, sans-serif; color: black; font-size: 11px;         padding-top:0px; border-color: #96D4D4; width:90%;" border=1>
-                 <tr>
-                      <th style="width:10%">Year</th>
-                      <th style="width:32%">Fall</th>     
-                      <th style="width:13%">Note</th>
-                      <th style="width:32%">Fall</th>     
-                      <th style="width:13%">Note</th>
-                  </tr>
-                 <tr>
-                   <td style="text-align: center;">
-                       <br><br>
-                       <b>1</b>
-                       <br><br>
-                     </td>
-                   <td>
-                       FYE <font color="red">[GenEd]</font><br>
-                       MAT 125<font color="red">[GenED]</font><br>
-                       CSC 141 below(Sci.)<font color="red">[GenEd]</font><br>
-                       WRT 120/WRT 123 <font color="red">[GenEd]</font><br>
-                       GenEd Humanities<font color="red">[GenEd]</font>
-                      </td>
-                     
-                      <td>
-                       <br>
-                        Gen Ed: 16<br>
-                        Univ Req: 0<br>
-                        SDS: 0<br>
-                        SDS Elec. 0<br>
-                        Domain Elec. 0
-                      </td>
-                   <td>
-                     STA 200 <font color="blue">[SDS]</font><br>
-                     MAT 161 <font color="blue">[SDS]</font><br>
-                     CSC 141 (Python)<font color="red">[GenEd]</font><br>
-                     Diverse Communities "J" Course <font color="red">[GenEd]</font><br>
-                     GenEd Behav/Soci Sci<font color="red">[GenEd]</font>
-                     </td>
-                     
-                      <td>
-                        Gen Ed: 9<br>
-                        Univ Req:0<br>
-                        SDS: 7<br>
-                        SDS Elec. 0<br>
-                        Domain Elec. 0
-                     </td>
-                 </tr> 
-                 
-                 <tr>
-                   <td style="text-align: center;">
-                       <br><br>
-                       <b>2</b>
-                       <br><br>
-                     </td>
-                     
-                   <td>
-                       MAT 243 <font color="blue">[SDS]</font><br>
-                       STA 246 <font color="blue">[SDS]</font><br>
-                       STA 319 <font color="blue">[SDS]</font><br>                       
-                       WRT 200-level <font color="red">[GenEd]</font><br>
-                       GenEd Humanities<font color="red">[GenEd]</font>
-                      </td>
-                     <td>
-                       <br>
-                        Gen Ed:6<br>
-                        Univ Req:0<br>
-                        SDS: 10<br>
-                        SDS Elec. 0<br>
-                        Domain Elec. 0
-                      </td>
-                   <td>
-                     STA 320  <font color="blue">[SDS]</font>("E")<br>
-                     STA 311 <font color="blue">[SDS]</font><br>
-                     W Course<font color="blue">[Univ. Req. "W"]</font><br>                         
-                     <b>Stats Elective</b><font color="blue"></font><br>
-                     GenEd Arts <font color="red">[GenEd]</font>
-                     </td>
-                     <td>
-                        Gen Ed: 3<br>
-                        Univ Req:3<br>
-                        SDS: 6<br>
-                        SDS Elec. 3<br>
-                        Domain Elec. 0
-                      </td>
-                 </tr> 
-                 
-                 <tr>
-                   <td style="text-align: center;"><br><br>
-                       <b>3</b>
-                       <br><br>
-                     </td>
-                     
-                   <td>
-                       MAT 421<font color="blue">[SDS]</font><br>
-                       STA 328<font color="blue">[SDS]</font><br>
-                       STA 288  <font color="blue">[SDS]</font><br>                          
-                       I course <font color="red">[GenEd]</font><br>
-                       <b>Stats Elective</b><font color="blue"></font><br>
-                      </td>
-                     <td>
-                        Gen Ed: 3<br>
-                        Univ Req:0<br>
-                        SDS: 9<br>
-                        SDS Elec. 3<br>
-                        Domain Elec. 0
-                      </td>
-                     
-                   <td>
-                     MAT 422<font color="blue">[SDS]</font><br>
-                     STA 419<font color="blue">[SDS]</font><br>
-                     <font color = "mediumvioletred"><b>Domain Elective</b></font><br>  
-                     <!--STA 428 <font color="blue">[SDS]</font><br-->
-                     <b>Stats Elective</b><font color="blue"></font><br>
-                     GenEd Beha./Soci. Sci.<font color="red">[GenEd]</font>
-                     </td>
-                     
-                     <td>
-                        Gen Ed:3<br>
-                        Univ Req:0<br>
-                        SDS: 6<br>
-                        SDS Elec. 3<br>
-                        Domain Elec. 3
-                      </td>
-                     
-                 </tr> 
-                 
-                 <tr>
-                   <td style="text-align: center;"><br><br>
-                       <b>4</b>
-                       <br><br>
-                     </td>
-                     
-                   <td>
-                       MAT 325 <font color="blue">[SDS]</font><br>
-                       J course <font color="red">[GenEd]</font><br>    
-                       <font color = "mediumvioletred"><b>Domain Elective</b></font><br>
-                       <b>Stats Elective</b><br>
-                       
-                      </td>
-                     <td>
-                        Gen Ed:3<br>
-                        Univ Req:0<br>
-                        SDS: 3<br>
-                        SDS Elec. 3<br>
-                        Domain Elec. 3
-                      </td>
-                   <td>
-                     STA 490 (S,W)<font color="blue">[Univ. Req]</font><br>
-                      ENG 368 (W) <font color="blue">[Univ Req]</font><br>
-                     <b>Stats Elective</b><br>
-                     <font color = "mediumvioletred"><b>Domain Elective</b></font><br>
-                     </td>
-                     <td>
-                        Gen Ed:0<br>
-                        Univ Req:6<br>
-                        SDS: 0<br>
-                        SDS Elec. 3<br>
-                        Domain Elec. 3
-                      </td>
-                 </tr> 
-             </table></p>   
-   
-               
-                  <p>
-                  <b>Total: 120</b><br>
-                      <i>Gen Ed</i>: 43<br>
-                      <i>Univ. Req</i>: 9<br>
-                      <i>SDS</i>: 44<br>
-                      <i>Stat Electives</i>: 15<br>
-                      <i>Domain Electives</i>: 9<br>
-                  </p>
-                  <br><br>
-               </font>
-               <hr color="lightblue">
-            </TD>
-        </tr>              
-                    
-        <!--tr>
-           <TD style = "line-height: 110%;">
-              <h4 style="padding-bottom: 0px; margin: 0;"><font color = "#123456">SDS Minor Reqirements</font></h4>
-               <font color = 'black' face="WildWest" size="4">
-                  <p> To be completed .....</p>
-                  <br><br>
-               </font>
-               <hr color="lightblue">
-            </TD>
-        </tr-->
-       
-        <tr>
-           <TD style = "line-height: 110%;">
-              <h4 style="padding-bottom: 0px; margin: 0;"><font color = "#123456">List of Statistics and Data Science Courses</font></h4>
-              <p> All courses in the following list carry 3 credits except for STA496, STA498, and STA499.</p>
-               
-               <!--font color = 'black' face="WildWest" size="4"-->
-               <span class="collapsible" style = "font-family: Verdana, sans-serif; color: purple; font-size: 12px;" ><b>STA 200. Statistics II </b><font color = "black">(tentative topics available)</font> <b>+ </b> <br></span>               
-               <p class="content">Continuation of MAT 121/MAT 125. Topics include inference about the means, standard deviations and proportions, goodness of fit, analysis of variance, regression analysis, correlation, and nonparametric tests. In addition, students will learn to use SPSS, a statistical analysis software that is available for free through the Ram Cloud. Finally, students will hone their technical writing skills by summarizing their statistical analyses with written reports.
-                      <br>
-                      <b>Pre / Co requisites</b>: STA 200 requires a prerequisite of a grade of C- or better in MAT 121, MAT 125 or ECO 251.
-                      <br>
-                       Distance education offering may be available.
-                      <br>
-                       Typically offered in Fall &amp; Spring.
-                    <br><br>
-                    <a href="STA200Topics.html"  target="popup" onclick="window.open('STA200Topics.html','name','width=500,height=600')" ><link-btn>Tentative Topics</link-btn></a>
-                   
-                    </p>
-               
-                <span class="collapsible" style = "font-family: Verdana, sans-serif; color: purple; font-size: 12px;" ><b>STA 201. Statistical Methods for Political Polling + </b></span>
-               <p class="content">
-               The purpose of this course is to introduce students to the statistical methodology used in the analysis of data from a political survey. Topics will include sampling techniques, hypothesis testing, sample size calculation, categorical data analysis, simple linear regression, and ANOVA. There will be a field trip to the Center for Opinion Research at Franklin and Marshall College at the beginning of the semester.
-                       <br>
-                      <b>Pre / Co requisites</b>: STA 201 requires a prerequisite of MAT 121 or PSC 200.
-                       <br>
-                       Typically offered in Fall.
-                    </p>
-               
-                 <span class="collapsible" style = "font-family: Verdana, sans-serif; color: purple; font-size: 12px;" ><b>STA 202. Sports Analytics + </b></span>
-                  <p class="content">
-                      In this course we will apply concepts such as regression, classification, clustering, decision trees and others to evaluate players and teams from baseball, basketball, football, hockey and soccer. We will also introduce the statistical programming language R in order to analyze recent (and large!) data sets.
-                       <br>
-                      <b>Pre / Co requisites</b>: STA 202 requires a prerequisite of a C- or higher in MAT 121, MAT 125, or ECO 251.
-                       <br>
-                       Typically offered in Fall.  
-                    </p>
-                    
-
-                  <span class="collapsible" style = "font-family: Verdana, sans-serif; color: purple; font-size: 12px;" ><b>STA 203. Probability and Statistics in Gaming + </b></span>
-               <p class="content">
-                     In this class students will learn the important role that probability and statistics play in the enjoyment and development of games ranging from blackjack and the lottery to Battleship and World of Warcraft. Statistical topics include descriptive statistics, probability, discrete random variables, and multivariate linear modeling. Throughout the course students will use statistical tools to not only develop optimal strategies while gaming but also to analyze the current trends in contemporary gaming, determine which factors correlate with a game's popularity, and how to develop algorithms for computer opponents.
-                        <br>
-                       <b>Pre / Co requisites</b>: STA 203 requires a prerequisite of MAT 121 or MAT 125.
-                        <br>
-                       Typically offered in Spring.
-                    </p>
-               
-                     <span class="collapsible" style = "font-family: Verdana, sans-serif; color: purple; font-size: 12px;" ><b>STA 268 Interactive Exploratory Data Analysis</b><font color = "black">(tentative topics available)</font> <b>+ </b> <br><br><font color = "red">[A new course to be developed]</font></span>
-                   <p class="content">
-                     Introduce technologies required interactive exploratory data analysis to uncover hidden patterns in the massive and complex data and enhance effective analytic communications. Topics include web-based technologies and platforms, lower and high dimension descriptive statistics, data reduction, feature engineering, model-based information extraction, and the design of interactive visual representation. This course will assume some coding experience. A software program such Tableau and Qlick will also be used in the class.  
-                     <br>
-                     <b>Pre / Co requisites</b>: STA 200, CSC141(Python) or Permission of the Instructor. 
-                     <br>
-                     Typically offered in Fall &amp; Spring.
-                       
-                        <br><br>
-                    <a href="EDA-topicList.html"  target="popup" onclick="window.open('EDA-topicList.html','name','width=500,height=600')" ><link-btn>Tentative Topics</link-btn></a>
-                   </p>   
-                   </p>
-               
-               <span class="collapsible" style = "font-family: Verdana, sans-serif; color: purple; font-size: 12px;" ><b>STA 288 Programmatic Visual Analytics</b><font color = "black">(tentative topics available)</font> <b>+ </b> <br><font color = "red">[A new course to be developed]</font></span>
-                   <p class="content">
-                     This is a programming-based visual analytics course focusing on using principles of visual design and interactive technologies to unveil trend and patterns from data through statistical modeling and data-driven algorithms. Topics include traditional design principles, strategies and elements in data visualization, programmatic approches to automation and realtime visualization, conditioning and marginalizing apparoaches to visualizing models and algorithms for high dimensional data, etc. Students will gain hands-on exoerience through a series topic specific mini-projects. 
-                      <br>
-                      <b>Pre / Co requisites</b>: STA 200, STA 268, CSC141(Python) or Permission of the Instructor. 
-                       <br>
-                      Typically offered in Fall &amp; Spring.
-                        <br><br>
-                    <a href="Viz-topicList.html"  target="popup" onclick="window.open('Viz-topicList.html','name','width=500,height=600')" ><link-btn>Tentative Topics</link-btn></a>
-                   </p>
-               
-               
-                    <span class="collapsible" style = "font-family: Verdana, sans-serif; color: purple; font-size: 12px;" ><b>STA 311. Intro Statistical Computing and Data Management </b><font color = "black">(tentative topics available)</font> <b>+ </b> <br></span>
-                   <p class="content">
-                     Course will give students the ability to manage and manipulate data effectively, conduct basic statistical analysis, and generate reports and graphics primarily using the SAS Statistical Software Program.
-                         <br>
-                       <b>Pre / Co requisites</b>: STA 311 requires a prerequisite of MAT 121 or MAT 125.<br>
-                        Distance education offering may be available.
-                        <br>
-                        Typically offered in Spring.
-                       <br><br>
-                    <a href="STA311-Topics.html"  target="popup" onclick="window.open('STA311-Topics.html','name','width=500,height=600')" ><link-btn>Tentative Topics</link-btn></a>
-                   </p>
-                   
-                     <span class="collapsible" style = "font-family: Verdana, sans-serif; color: purple; font-size: 12px;" ><b>STA 319. Applied Statistics </b><font color = "black">(tentative topics available)</font> <b>+ </b> <br></span>
-                   <p class="content">
-                     This course will cover simple and multiple linear regression methods and linear time series analysis with an emphasis on fitting suitable models to data and testing and evaluating models against data.
-                       <br>
-                        <b>Pre / Co requisites</b>: STA 319 requires a prerequisite of C or better in (MAT 121 or MAT 125) and (MAT 143 or MAT 145 or MAT 161).<br>
-                       <br>
-                        Typically offered in Fall &amp; Spring.
-                       <br><br>
-                    <a href="STA319-Topics.html"  target="popup" onclick="window.open('STA319-Topics.html','name','width=500,height=600')" ><link-btn>Tentative Topics</link-btn></a>
-                   
-                   </p>
-                   
-                     <span class="collapsible" style = "font-family: Verdana, sans-serif; color: purple; font-size: 12px;" ><b>STA 320. Experimental Design + </b><br><font color = "blue">[to be modified as sampling and survey design and analysis]</font></span>
-                   <p class="content">
-                     The purpose of this course is to guide students in learning how to design, conduct and analyze the results of scientific studies so that valid and objective inferences about the population are obtained. It will cover ANOVAs, block, factorial, and split plot designs, as well as response surface analysis.
-                       <br>
-                     <b>Pre / Co requisites</b>: STA 320 requires a prerequisite of C or better in MAT 121 or MAT 125.
-                       <br>
-                     Typically offered in Fall.
-                   </p>
-                   
-                    <span class="collapsible" style = "font-family: Verdana, sans-serif; color: purple; font-size: 12px;" ><b>STA 321. Topics in Advanced Statistics </b><font color = "black">(tentative topics available)</font> <b>+ </b> <br><font color = "blue">[suggest moving to 400 level, for example STA421, and renaming it as <i>Practical Regression Analysis</i>]</font></span>
-                   <p class="content">
-                     Course will cover select topics in categorical analysis, nonparametrics and time series analysis. Emphasis will be placed on statistical programming, particularly simulations.
-                       <br>
-                     <b>Pre / Co requisites</b>: STA 321 requires prerequisites of C or better in STA 311, STA 319, STA 320<font color="red">(sampling)</font>, and MAT 421.
-                     <br>
-                     Typically offered in <font color = "red">Fall</font>.
-                    <br><br>
-                    <a href="STA321-Topics.html"  target="popup" onclick="window.open('STA321-Topics.html','name','width=500,height=600')" ><link-btn>Tentative Topics</link-btn></a>
-                   </p>
-                   
-                     <span class="collapsible" style = "font-family: Verdana, sans-serif; color: purple; font-size: 12px;" ><b>STA 328 Introduction to Data Science </b><font color = "black">(tentative topics available)</font> <b>+ </b> <br><font color = "blue">[Pending for CAPC approval]</font></span>
-                   <p class="content">
-                     This is a non-technical and introductory course of data science using a programming language such as Python and R as the primary computational tool. The course will highlight data science as a process of integrating statistical models and machine learning algorithms to solve real world problems. Students will gain hands-on experience through a case study on an end-to-end data science project. Topics include components of data science process, tree-based algorithms, models for rare event predction, cross validation for model selection and performance KPIs. 
-                     <br>              
-                     <b>Pre / Co requisites</b>: STA 319, STA 320<font color="red">(sampling)</font>, CSC141(Python) or Permission of the Instructor. 
-                      <br>
-                     Typically offered in Spring.
-                       <br><br>
-                    <a href="DSCI-topicList.html"  target="popup" onclick="window.open('DSCI-topicList.html','name','width=500,height=600')" ><link-btn>Tentative Topics</link-btn></a>
-                       
-                   </p>
-                   
-                    <span class="collapsible" style = "font-family: Verdana, sans-serif; color: purple; font-size: 12px;" ><b>STA 318 Statistical Process Control </b><font color = "black">(tentative topics available)</font> <b>+ </b> <br><font color = "blue">[Pending for CAPC approval]</font></span>
-                   <p class="content">
-                     This is a non-technical and introductory course of data science using a programming language such as Python and R as the primary computational tool. The course will highlight data science as a process of integrating statistical models and machine learning algorithms to solve real world problems. Students will gain hands-on experience through a case study on an end-to-end data science project. Topics include components of data science process, tree-based algorithms, models for rare event predction, cross validation for model selection and performance KPIs. 
-                     <br>              
-                     <b>Pre / Co requisites</b>: STA 319, STA 320<font color="red">(sampling)</font>, CSC141(Python) or Permission of the Instructor. 
-                      <br>
-                     Typically offered in Spring.
-                         <br><br>
-                    <a href="SPC-topicList.html"  target="popup" onclick="window.open('SPC-topicList.html','name','width=500,height=600')" ><link-btn>Tentative Topics</link-btn></a>
-                       
-                   </p>
-               
-               <span class="collapsible" style = "font-family: Verdana, sans-serif; color: purple; font-size: 12px;" ><b>STA 408. Applications of Modern Nonparametric Statistics </b><font color = "black">(tentative topics available)</font> <b>+ </b> <br><font color = "blue">[Pending for CAPC approval]</font></span>
-                   <p class="content">
-                     This is an applied statistics course focuses on modern nonparametric approaches to regression modeling and related applications. Topics include concepts of bootstrap methods,  local regression,  smoothing and spline regression, regression trees methods, concepts of semi-parametric methods, etc. The traditional rank-based non-parametric tests will also be briefly introduced. Students will gain hands-on experience through various data driven modeling projects. A formal programming language such as R and Python and related libraries will be used for data analysis.
-                     <br>
-                       <b>Pre / Co requisites</b>: STA 319, STA 320<font color="red">(sampling)</font>, CSC141(Python) or Permission of the Instructor. 
-                     <br>
-                     Typically offered in Fall.
-                     <br><br>
-                    <a href="NonParTopics.html"  target="popup" onclick="window.open('NonParTopics.html','name','width=500,height=600')" ><link-btn>Tentative Topics</link-btn></a>
-                       
-                      </p>
-               
-               
-                    <span class="collapsible" style = "font-family: Verdana, sans-serif; color: purple; font-size: 12px;" ><b>STA 419. Basics of Statistical Learning </b><font color = "Tomato">(waiting for Drew's topic list)</font> <b>+ </b><br></span>
-                   <p class="content">
-                     This course will provide an introduction to statistical learning and predictive modeling. Tools will be developed for visualizing and understanding complex data sets. All data analysis will be done using the statistical programming language R.
-                     <br>
-                     <b>Pre / Co requisites</b>: STA 419 requires a prerequisite of a C or better in STA 319.
-                     <br>
-                     Distance education offering may be available.
-                     <br>
-                     Typically offered in Fall.
-                   </p>
-               
-                  <span class="collapsible" style = "font-family: Verdana, sans-serif; color: purple; font-size: 12px;" ><b>STA 428. Statistical Methods for Data Science </b><font color = "Tomato">(tentative topics unavailable, will be compiled once I receive the topics from STA419)</font> <b>+ </b><br></span>
-            
-                    <p class="content">This course introduces statistical methods used in data science and data science algorithms rooted in statistics to reflect the symbiotic relationship between the two subjects. Students will gain hands-on experience in integrating tools in both subjects to solve real-world problems. Topics include probabilistic and statistical models such as naive Bayes, algorithmic-based regression models, and machine learning tools such as tree-based algorithms, latent regression for dimension reduction, support vector machines, and neural networks. The course emphasizes application with commonly used software libraries.
-                     <br>    
-                    <b>Pre / Co requisites</b>: STA 319, STA 321 (STA421), CSC 141(Python) or Permission of the Instructor. <br>
-                    Typically offered in Fall &amp; Spring.
-                    </p>  
-                                 
-            
-                    <span class="collapsible" style = "font-family: Verdana, sans-serif; color: purple; font-size: 12px;" ><b>STA 490. Capstone Course in Statistics </b><font color = "black">(tentative topics available)</font> <b>+ </b> <br></span>
-                   <p class="content">
-                     Course will synthesize lessons learned throughout the students career with the goal of preparing students for work as professional statisticians. Topics will include report writing, presentations, statistical consulting, sampling design, and resume writing.
-                    <br>
-                     <b>Pre / Co requisites</b>: STA 490 requires prerequisites of ENG 368 or ENG 375 or ENG 371 and a C or better in STA 320<font color="red">(sampling)</font> and STA 321.
-                    <br>
-                     Typically offered in <font color = "red">Spring</font>.
-                       <br><br>
-                    <a href="STA490-Topics.html"  target="popup" onclick="window.open('STA490-Topics.html','name','width=500,height=600')" ><link-btn>Tentative Topics</link-btn></a> 
-                   </p>
-               
-                    
-                    <span class="collapsible" style = "font-family: Verdana, sans-serif; color: purple; font-size: 12px;" ><b>STA 496. Internship in Statistics and Data Science</b> <font color = "black">(1-2 credits)</font> <b>+ </b><br></span>
-                   <p class="content">
-                     In cooperation with regional businesses and industrial companies, student will perform an internship in applied mathematics..
-                    
-                    <br>
-                     Repeatable for credit.
-                   </p>
-               
-                    <span class="collapsible" style = "font-family: Verdana, sans-serif; color: purple; font-size: 12px;" ><b>STA 498. Independent Study</b> <font color = "black">(1-3 credits)</font> <b>+ </b><br></span>
-                   <p class="content">
-                     Independent investigation of an area of statistics and data science not covered in the department's course offerings..
-                    <br>
-                     <b>Consent</b>: Permission of the Department required to add.
-                    <br>
-                     Repeatable for credit.
-                   </p>
-               
-               <span class="collapsible" style = "font-family: Verdana, sans-serif; color: purple; font-size: 12px;" ><b>STA 499. Undergraduate Thesis Research</b> <font color = "black">(up to 6 credits)</font> <b>+ </b> <br></span>
-                   <p class="content">
-                     Conduct an original research in the areas of statistics and data science.
-                    <br>
-                     <b>Consent</b>: Permission of the Department required to add.
-                    <br>
-                     Repeatable for credit.
-                   </p>
-               
-               
-               
-                   <br><br>
-               </font>
-               <hr color="lightblue">
-            </TD>
-        </tr>
-        
-        </table>
-       </TD>
-       <!--create a margin to the right side of the table-->
-       <TD style="width:2%"></TD>
-     </tr>
-     </tbody>
-    </table>
-    <BR><BR>
-  </body> <!-- close html body: required -->
-        <script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    } 
-  });
-}
+<style>
+    .table {
+        color: green;
+        display: block;
+        max-width: 100%;
+        overflow: scroll; <!-- Available options: visible, hidden, scroll, auto -->
+    }
+</style>
+    
+    
+<script type='text/javascript' id='sgr_main-js-extra'>
+/* <![CDATA[ */
+var sgr_main = {"sgr_site_key":"6LcmTAcaAAAAAEELVElChVbNtpYH8TxjxPvYq9gv"};
+/* ]]> */
 </script>
+<script type='text/javascript' src='js/jquery.min.js' id='jquery-core-js'></script>
+<script type='text/javascript' src='js/scripts.js' id='dt_scripts-js'></script>
+<script type='text/javascript' src='js/cp01.js'></script> 
+<script type='text/javascript' src='js/cp02.js'></script>
+</head>
+
+    
+<body class="archive category category-reviews category-8" id="top">	
+  
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="img/top.png" width="30" height="30"></button>
+    
+	<div id="wrap">
+	<div  class="boxed"  id="page">
+          <div id="bg">
+             <div id="wrapper">
+
+                 
+               <header id="header" class="logo-left">
+                  <!------------------------------------->            
+                  <!--            logo panel           -->
+                  <!------------------------------------->  
+                   <!--div--> 
+                  <img class="dt-top-logo" src="img/placeholder.jpg" width="40" height="20"/><br>
+                   <a href="" class="logo">
+                 
+                    <a href=""><img class="dt-top-logo" src="img/placeholder.jpg" width="40" height="80"/>
+                    <img class="dt-top-logo" src="img/icon.jpg" width="110" height="100"/>
+                       <img class="dt-top-logo" src="img/banner.jpg" width="280" height="100"/>
+                       <img class="dt-top-logo" src="img/placeholder.jpg" width="400" height="80"/></a>
+                       <a href="https://pengdsci.github.io/MAT121EB/" target="popup"  onclick="window.open('https://pengdsci.github.io/MAT121EB/','name','width=900,height=500')"><img src="img/eBook.jpg" align="bottom" width="70" height="100" /></a></a> 
+                   <!--/div-->
+                  <!------------------------------------->            
+                  <!--  Top navigation panel buttons   -->
+                  <!------------------------------------->   
+                <nav> 
+                <div class="main-menu">
+                 <ul id="nav">
+                    
+                     <li><li class="first"><a href="w00/MAT121Syllabus.pdf" target="_blank" 
+                onclick="window.open('w00/MAT121Syllabus.pdf','name','width=900,height=500')">
+                    <font color = "#0F3483"> Syllabus</font></a></li>
+                     
+                   <li><li class="first"><a href="OnlineLearningStrategies.png" target="_blank" 
+                onclick="window.open('OnlineLearningStrategies.png','name','width=900,height=500')">
+                    <font color = "#0F3483"> Learning Strategies</font></a></li>
+                                 
+                     
+                     <li><a href=""><font color = "#0F3483">Office Hours</font><span class="a-inner"></span></a> 
+                        <!-- Drop-down manual-->
+                        <div><ul>        
+                          <!--li class="navitem active"><center><b>Tuesday</b> <br><font size=2 color="purple">2:00PM-3:00PM </font></center></li-->
+                            
+                          <li class="navitem active"><center><b>Tuesday/Wednesday/Thursday</b> <br> <font size=2 color="purple">1:30PM-3:30PM <br>(Zoom Only!)</font></center></li>
+                            
+                          <!--li class="navitem active"><center><b>Thursday</b> <br><font size=2 color="purple">2:00PM-5:00AM</font></center></li-->
+                            </ul>
+                        </div></li>
+                     
+                   <li ><a href="https://wcupa.zoom.us/j/6840171840?pwd=ZC90eHk4OUJ5QUlnUzdCUEd2cW5VZz09" target="popup" onclick="window.open('https://wcupa.zoom.us/j/6840171840?pwd=ZC90eHk4OUJ5QUlnUzdCUEd2cW5VZz09','name','width=900,height=500')" class="nav-link"><font color = "#0F3483">Zoom </font></a></li>
+                     
+                     <li><a href=""><font color = "#0F3483">Interactive Apps</font><span class="a-inner"></span></a> 
+                        <!-- Drop-down manual-->
+                        <div><ul>        
+                            
+                     <li class="navitem active" > <a href="https://wcupeng.shinyapps.io/DescriptiveStats/"  target="popup" onclick="window.open('https://wcupeng.shinyapps.io/DescriptiveStats/',
+                         'name','width=900,height=500')"  class="dropdown-item">1. Descriptive Statistics</a></li>
+
+                    <li class="navitem active"> <a href="https://wcupeng.shinyapps.io/ZTable/"  target="popup" onclick="window.open('https://wcupeng.shinyapps.io/ZTable/','name','width=900,height=500')"  class="dropdown-item">2. Standard Normal Table</a></li>
+                       
+                    <li class="navitem active"> <a href="https://chengpeng.shinyapps.io/TwoQ4NormalDist/"  target="popup" onclick="window.open('https://chengpeng.shinyapps.io/TwoQ4NormalDist/','name','width=900,height=500')"  class="dropdown-item">3. Normal Dist. Questions</a></li>
+                       
+                    <li class="navitem active"> <a href="https://wcupeng.shinyapps.io/CLTdemo/"  target="popup" onclick="window.open('https://wcupeng.shinyapps.io/CLTdemo/','name','width=900,height=500')"  class="dropdown-item">4. CLT Demo</a></li>                       
+              
+                    <li class="navitem active"> <a href="https://wcupeng.shinyapps.io/AppsCLT4Means/"  target="popup" onclick="window.open('https://wcupeng.shinyapps.io/AppsCLT4Means/','name','width=900,height=500')"  class="dropdown-item">5. CLT for Means</a></li>                       
+                    <li class="navitem active"> <a href="https://wcupeng.shinyapps.io/AppsCLT4Prop/"  target="popup" onclick="window.open('https://wcupeng.shinyapps.io/AppsCLT4Prop/','name','width=900,height=500')"  class="dropdown-item">6. CLT for Proportions</a></li>
+                       
+                    <li class="navitem active"> <a href="https://wcu-peng.shinyapps.io/NormalCI4MeanProp/"  target="popup" onclick="window.open('https://wcu-peng.shinyapps.io/NormalCI4MeanProp/','name','width=900,height=500')"  class="dropdown-item">7. Z CI for Means and Prop.</a></li> 
+                       
+                    <li class="navitem active"> <a href="https://wcu-peng.shinyapps.io/t-Table/"  target="popup" onclick="window.open('https://wcu-peng.shinyapps.io/t-Table/','name','width=900,height=500')"  class="dropdown-item">8. Student t Table</a></li>                     
+                       
+                    <li class="navitem active"> <a href="https://wcu-peng.shinyapps.io/Student-t-CI/"  target="popup" onclick="window.open('https://wcu-peng.shinyapps.io/Student-t-CI/','name','width=900,height=500')"  class="dropdown-item">9. t CI for Means</a></li> 
+                         
+                    <li class="navitem active"> <a href="https://wcu-peng.shinyapps.io/oneMean-z-Test/"  target="popup" onclick="window.open('https://wcu-peng.shinyapps.io/oneMean-z-Test/','name','width=900,height=500')"  class="dropdown-item">10. Z Test for 1-Mean</a></li>                     
+                       
+                    <li class="navitem active"> <a href="https://wcu-peng.shinyapps.io/oneMean-ttest/"  target="popup" onclick="window.open('https://wcu-peng.shinyapps.io/oneMean-ttest/','name','width=900,height=500')"  class="dropdown-item">11. t Test for One Mean</a></li>                      
+                       
+                    <li class="navitem active"> <a href="https://chpeng.shinyapps.io/oneProp-z-testR/"  target="popup" onclick="window.open('https://chpeng.shinyapps.io/oneProp-z-testR/','name','width=900,height=500')"  class="dropdown-item">12. Z Test for 1-Prop.</a></li>  
+                    
+                   <li class="navitem active"> <a href="https://chpeng.shinyapps.io/twoSampleTests/"  target="popup" onclick="window.open('https://chpeng.shinyapps.io/twoSampleTests/','name','width=900,height=500')"  class="dropdown-item">13. Testing Two Means</a></li> 
+                       
+                  <li class="navitem active"> <a href="https://chpeng.shinyapps.io/LSE-Reg/"  target="popup" onclick="window.open('https://chpeng.shinyapps.io/LSE-Reg/','name','width=900,height=500')"  class="dropdown-item">14. Regression: Simulation</a></li>     
+                     
+                  <li class="navitem active"> <a href="https://chengpeng.shinyapps.io/correlation-reg/"  target="popup" onclick="window.open('https://chengpeng.shinyapps.io/correlation-reg/','name','width=900,height=500')"  class="dropdown-item">15. Correlation and Reg.</a></li>  
+                       
+                   <li class="navitem active"> <a href="https://chpeng.shinyapps.io/chisq-gof/"  target="popup" onclick="window.open('https://chpeng.shinyapps.io/chisq-gof/','name','width=900,height=500')"  class="dropdown-item">16. Goodness-of-fit Test</a></li>     
+                    
+                   <li class="navitem active"> <a href="https://chpeng.shinyapps.io/chisq-independence/"  target="popup" onclick="window.open('https://chpeng.shinyapps.io/chisq-independence/','name','width=900,height=500')"  class="dropdown-item">17. Test of Independence</a></li>                          
+                            </ul>
+                        </div></li>
+                     
+                     <li><a href=""><font color = "#0F3483">Flowcharts</font><span class="a-inner"></span></a> 
+                        <!-- Drop-down manual-->
+                        <div><ul>        
+                   <li class="navitem active"> <a href="w00/w08-CI-Flow-chart.pdf"  target="popup" onclick="window.open('w00/w08-CI-Flow-chart.pdf','name','width=900,height=500')"  class="dropdown-item">Confidence Interval</a></li>
+
+                    <li class="navitem active"> <a href="w00/w10-HT-flow-chart.pdf"  target="popup" onclick="window.open('w00/w10-HT-flow-chart.pdf','name','width=900,height=500')"  class="dropdown-item">Testing Hypothesis</a></li>
+                       
+                   <li class="navitem active"> <a href="w00/w11-Two-sample-flow-chart.pdf"  target="popup" onclick="window.open('w00/w11-Two-sample-flow-chart.pdf','name','width=900,height=500')"  class="dropdown-item">Two Sample Tests</a></li>
+                                             
+                            </ul>
+                        </div></li>
+                     
+                     <li><a href=""><font color = "#0F3483">Stats Tables</font><span class="a-inner"></span></a> 
+                        <!-- Drop-down manual-->
+                        <div><ul>        
+                    <b>Statistical Tables</b>
+                     <li class="navitem active"> <a href="w00/w00-statstables.html"  target="popup" onclick="window.open('w00/w00-statstables.html','name','width=900,height=500')"  class="dropdown-item">HTML Version</a></li>
+
+                    <li class="navitem active"> <a href="w00/w00-statstables.pdf"  target="popup" onclick="window.open('w00/w00-statstables.pdf','name','width=900,height=500')"  class="dropdown-item">PDF Version</a></li>
+                     
+                            </ul>
+                        </div></li>
+
+
+                   <li><a href=""><font color = "#0F3483">Probability Calculators</font><span class="a-inner"></span></a> 
+                        <!-- Drop-down manual-->
+                        <div><ul>        
+                    <b>Statistical Tables</b>
+                     <li class="navitem active"> <a href="http://www.rossmanchance.com/applets/2021/normcalc/NormCalc.html"  target="_blank" onclick="window.open('http://www.rossmanchance.com/applets/2021/normcalc/NormCalc.html','name','width=900,height=500')"  class="dropdown-item">Normal Calculator</a></li>
+
+                    <li class="navitem active"> <a href="http://www.rossmanchance.com/applets/2021/tcalc/tCalc.htm"  target="_blank"  onclick="window.open('http://www.rossmanchance.com/applets/2021/tcalc/tCalc.htm','name','width=900,height=500')"  class="dropdown-item">T Calculator</a></li>
+                     
+                            </ul>
+                        </div></li>
+                     
+                   <li><a href=""><font color = "#0F3483">Contact</font><span class="a-inner"></span></a> 
+                        <!-- Drop-down manual-->
+                        <div><ul>        
+                          <li class="navitem active"><center><b>Office</b> <br><font size=2 color="purple">UNA 107 </font></center></li>
+                            
+                          <li class="navitem active"><center><b>Email</b> <br> 
+                              <a href = "mailto: abc@example.com"><img src = "img/email.jpg" width="110" height="15"></a>
+                              <font size=2 color="purple"></font></center></li>
+                            
+                          <li class="navitem active"><center><b>Zoom </b> <br> 
+                              <a href="https://wcupa.zoom.us/j/6840171840?pwd=ZC90eHk4OUJ5QUlnUzdCUEd2cW5VZz09" target="_blank" onclick="window.open('https://wcupa.zoom.us/j/6840171840?pwd=ZC90eHk4OUJ5QUlnUzdCUEd2cW5VZz09','name','width=900,height=500')" class="nav-link"><font color = "#0F3483">Web Link</font></a>
+                              <font size=2 color="purple"></font></center></li>   
+                          </ul>
+                        </div></li>
+                     
+                    </ul>  
+                  </div>
+                  </nav>
+               </header> 
+
+
+  
+<center> 
+  <div id="svdbanner"> 
+      <marquee> <a href="https://pengdsci.github.io/MAT121W5/OnlineLearningStrategies.png"  target="_blank"  onclick="window.open('https://pengdsci.github.io/MAT121W5/OnlineLearningStrategies.png','name','width=900,height=500')"><link-btn> <font color = "red"> SUGGESTED WEEKLY LEARNING SCHEDULE </font></link-btn> </a></marquee>
+  <table class="center" style="width:95%" border = "0" id="container">
+    <tr>
+    <td><img class="dt-top-logo" src="img/placeholder.jpg" width="80" height="80"/></td>
+    <td>             
+    <h3 id = "week01">1. Frequency Tables and Charts</h3>
+
+    <!--div class="entry-meta">
+    <span class="ico-link date"><span>June 26, 2023</span></span><span class="ico-link author">
+        <a href="">Cheng Peng</a></span>
+    </div-->
+
+        <h5>Topics and Notes </h5>
+        <ol style="line-height: 1.5em; margin-bottom: 15px">
+            
+        <li> Course resources and logistics <a href="notes/w01-CourseInfoLogistics.html" target="_blank" 
+                 onclick="window.open('notes/w01-CourseInfoLogistics.html','name','width=900,height=500')" style = "padding-bottom: 0px"><link-btn> HTML</link-btn></a> <font color = "red">[Including suggested weekly learning schedule]</font>  </li>
+              
+         <li> Tabular and graphical summary of data</li>
+          <ul>
+            <li> a. Summary of categorical data: bar chart, pie chart, frequency tables.</li>
+            <li> b. Summary of numerical data: histograms and frequency tables, </li>
+            <li> c. <b>Lecture Note</b>: Descriptive statistics  
+                <a href="notes/w01-freqTableCharts.html" target="_blank"  
+                 onclick="window.open('notes/w01-freqTableCharts.html','name','width=900,height=500')">
+                  <link-btn> HTML</link-btn></a> 
+                  <a href="notes/w01-freqTableCharts.pdf"  target="_blank" 
+                 onclick="window.open('notes/w01-freqTableCharts.pdf','name','width=900,height=500')">
+                  <link-btn> PDF</link-btn></a></li>
+              </ul>
+        </ol>
         
-<script>
-function myFunction() {
-  var x = document.getElementById("myDIV");
-  if (x.style.display === "none") {
-    x.style.display = "block";
+        <h5>Practice and Interactive Apps</h5>
+          
+           <ol style="line-height: 1.5em; margin-bottom: 15px">   
+              
+              <li> <b>Online Practice 01: </b><a href="Practice/w01-assessment.html" target="_blank"   onclick="window.open('Practice/w01-assessment.html','name','width=900,height=500')">
+                          <font = color="blue">Descriptive Statistics </font><link-btn> WEB LINK</link-btn></a>
+             <li> <font color = "red">[Optional]</font> <b>More Exercises</b>:  Work on example in 2.1-2.2 of Navidi's textbook</li>
+         
+             <li> Interactive Statistics Learning Apps (ISLA): <a href="https://wcupeng.shinyapps.io/DescriptiveStats/"   target="_blank" onclick="window.open('https://wcupeng.shinyapps.io/DescriptiveStats/','name','width=900,height=500')" >Descriptive Stats <link-btn> APPS</link-btn></a></li>  
+              
+             </ol> 
+        
+         <!--h5> <font color = "navy">Week's Assignment (Weekly quiz)</font></h5> 
+        
+            <ol style="line-height: 1.5em; margin-bottom: 15px">
+             
+              <li> <b>Available on D2L:</b> 12:00 PM, Thursday</li>
+              <li> <b>Due:</b> 11:30 PM, Sunday</li>
+              <!--li> <a href="HW/week01-quiz-key.pdf"  target="_blank"  onclick="window.open('HW/week01-quiz-key.pdf,'name','width=900,height=500')" ><font color = "red"><b>Answer Key to Weekly Quiz #1 <link-btn> PDF</link-btn></b></font></a> <font color = "blue">[including the summary of week #1 quiz <br> included at the end of the key.]</font></li> 
+               
+            </ol-->              
+  </td>
+  
+          <td><img class="dt-top-logo" src="img/placeholder.jpg" width="150" height="80"/></td>
+<td>
+ <!----------------------------->
+ <!-- Layer two: right panel  -->
+ <!----------------------------->        
+        <aside id="aside" class="right">
+            
+            <div class="widget"><center><h3><font color = "darkblue">Table of Contents</font></h3></center>
+                <!-- First post-->
+                <div class="post first">
+                    <div class="post-bg">
+                        <!--div class="post-inner"-->
+                         <ul>
+                            <li><center><font color = "blue"> Week #1</font></center>
+                                
+                            <li><a href="index.html" class="nav-link">1. Frequency Tables and Charts </a></li>
+                            <li><a href="index02.html" class="nav-link">2. Numerical Measures</a></li>
+                            <li><a href="index03.html" class="nav-link">3. Concepts of Probability</a></li>
+                            <li><a href="exam01.html" class="nav-link"><font color = "red"> Exam #1 on Friday</font> <font color= "blue">[Instructions]</font></a>
+                                
+                            <hr color = "skyblue"> 
+                                
+                            <li><center> <font color = "blue"> Week #2 </font></center>    
+                                
+                            <li><a href="index04.html" class="nav-link">4. Normal Distributions</a></li>
+                            <li><a href="index05.html" class="nav-link">5. Sampling Distributions </a> </li>
+                            <li><a href="index06.html" class="nav-link">6. Z-Confidence Intervals </a></li> 
+                            <li><a href="exam02.html" class="nav-link"><font color = "red"> Exam #2 on Friday </font> <font color= "blue">[Instructions]</font></a>                                
+                            <hr color = "skyblue">  
+                            
+                            <li><center> <font color = "blue"> Week #3  </font></center>                            
+				            <li><a href="index07.html" class="nav-link">7. t-confidence Intervals </a></li> 
+                            <li><a href="index08.html" class="nav-link">8. Testing Hypotheses </a></li>
+                            <li><a href="index09.html" class="nav-link">9. One-sample Normal Tests </a> </li> 
+                            <li><a href="exam03.html" class="nav-link"><font color = "red">Exam #3 on Friday </font> <font color= "blue">[Instructions]</font></a> 
+                                
+                            <hr color = "skyblue">  
+                                
+                            <li><center> <font color = "blue"> Week #4</font></center>    
+                            <li><a href="index10.html" class="nav-link">10. t and Paired t-tests</a> </li> 
+				            <li><a href="index11.html" class="nav-link">11. Two-sample Tests</a> </li>  
+                            <li><a href="index12.html" class="nav-link">12. 2-sample Confidence Intervals</a> </li>
+                            <li><a href="exam04.html" class="nav-link"><font color = "red">Exam #4 on Friday </font> <font color= "blue">[Instructions]</font></a>
+                                
+                            <hr color = "skyblue"> 
+                                
+                            <li><center> <font color = "blue"> Week #5</font></center>    
+				            <li><a href="index13.html" class="nav-link">13. Correlation and Regression</a> </li>
+                            <li><a href="index14.html" class="nav-link">14. Chisquare tests </a> </li>
+                            <li><a href="index15.html" class="nav-link">15. Review of Final Exam </a> </li>
+                            <li><a href="exam05.html" class="nav-link"><font color = "red"> Final Exam </font> <font color= "blue">[Instructions]</font></a>     
+                                
+                            <hr color = "skyblue">     
+                      </ul>
+                                
+					</div>
+                </div>            
+        </div>
+    </aside>         
+
+   </td></tr></table>  
+   </div>
+    </center>   
+
+                  <!------------------------------------->            
+                  <!--  End navigation panel buttons   -->
+                  <!-------------------------------------> 
+              
+          
+      <div class="but-wrap">
+          <a href="#header" class="button"><span><i class="more"></i><btn><font color = "darkblue">Go to Table of Contents</font></btn></span></a>
+      </div>    
+
+        </div> <!-- END of wrapper -->     
+      
+      
+      
+<!------------------>
+<!-- Footer panel --> 
+<!------------------>
+<div class="line-footer"></div>
+<footer id="footer">
+<center>
+      <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=bdd86ca03bf3709e4523bf44ac939417956604f4'></script>
+      <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/832947/t/5"></script><a href='http://www.freevisitorcounters.com'><img src="img/blackdot.jpg"></a><br>
+    <font color = "white">  
+         Copyright &copy; 2019-
+         <script>
+             var CurrentYear = new Date().getFullYear()
+                 document.write(CurrentYear)
+          </script>
+                   C. Peng. Last updated: 
+          <script> 
+                 document.write(new Date().toLocaleDateString()); 
+           </script>
+      </font>  
+ </center>
+  <div><p>&nbsp;</p></div><p></p>
+</footer> 
+              <!-- END OF FOOTER  --> 
+ <script>
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
   } else {
-    x.style.display = "none";
+    mybutton.style.display = "none";
   }
 }
-</script>
-        
-</html> 
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>              
+              
+</div>           
+</div>
+</div>
+
+</body>
+</html>
